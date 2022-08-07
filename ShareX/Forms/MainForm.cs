@@ -2363,6 +2363,11 @@ namespace ShareX
             uim.CombineImages(Orientation.Horizontal);
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void tsmiCombineImagesVertically_Click(object sender, EventArgs e)
         {
             uim.CombineImages(Orientation.Vertical);

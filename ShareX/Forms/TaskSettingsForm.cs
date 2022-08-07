@@ -503,11 +503,11 @@ namespace ShareX
         {
             if (IsDefault)
             {
-                Text = "ShareX - " + Resources.TaskSettingsForm_UpdateWindowTitle_Task_settings;
+                Text = "PShare - " + Resources.TaskSettingsForm_UpdateWindowTitle_Task_settings;
             }
             else
             {
-                Text = "ShareX - " + string.Format(Resources.TaskSettingsForm_UpdateWindowTitle_Task_settings_for__0_, TaskSettings);
+                Text = "PShare - " + string.Format(Resources.TaskSettingsForm_UpdateWindowTitle_Task_settings_for__0_, TaskSettings);
             }
         }
 
@@ -1778,6 +1778,11 @@ namespace ShareX
         private void txtToolsScreenColorPickerInfoText_TextChanged(object sender, EventArgs e)
         {
             TaskSettings.ToolsSettings.ScreenColorPickerInfoText = txtToolsScreenColorPickerInfoText.Text;
+        }
+
+        private void TaskSettingsForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         #endregion Tools

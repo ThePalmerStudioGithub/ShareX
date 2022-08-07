@@ -44,7 +44,7 @@ namespace ShareX
 {
     internal static class Program
     {
-        public const string Name = "ShareX";
+        public const string Name = "PShare";
 
         public const ShareXBuild Build =
 #if RELEASE
@@ -68,7 +68,7 @@ namespace ShareX
                 sbVersionText.Append(version.Major + "." + version.Minor);
                 if (version.Build > 0 || version.Revision > 0) sbVersionText.Append("." + version.Build);
                 if (version.Revision > 0) sbVersionText.Append("." + version.Revision);
-                if (Dev) sbVersionText.Append(" Dev");
+                if (Dev) sbVersionText.Append(" Reverse");
                 if (Portable) sbVersionText.Append(" Portable");
                 return sbVersionText.ToString();
             }
@@ -304,7 +304,7 @@ namespace ShareX
 
             if (restartRequested)
             {
-                DebugHelper.WriteLine("ShareX restarting.");
+                DebugHelper.WriteLine("PShare restarting.");
 
                 if (restartAsAdmin)
                 {
@@ -322,7 +322,7 @@ namespace ShareX
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            DebugHelper.WriteLine("ShareX starting.");
+            DebugHelper.WriteLine("PShare starting.");
             DebugHelper.WriteLine("Version: " + VersionText);
             DebugHelper.WriteLine("Build: " + Build);
             DebugHelper.WriteLine("Command line: " + Environment.CommandLine);
@@ -375,12 +375,12 @@ namespace ShareX
                 closeSequenceStarted = true;
 
                 DebugHelper.Logger.AsyncWrite = false;
-                DebugHelper.WriteLine("ShareX closing.");
+                DebugHelper.WriteLine("PShare closing.");
 
                 if (WatchFolderManager != null) WatchFolderManager.Dispose();
                 SettingManager.SaveAllSettings();
 
-                DebugHelper.WriteLine("ShareX closed.");
+                DebugHelper.WriteLine("PShare closed.");
             }
         }
 
@@ -499,7 +499,7 @@ namespace ShareX
                         sb.AppendLine();
                         sb.Append(e);
 
-                        MessageBox.Show(sb.ToString(), "ShareX - " + Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(sb.ToString(), "PShare - " + Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         CustomPersonalPath = "";
                     }
                 }
@@ -604,7 +604,7 @@ namespace ShareX
                     {
                         DebugHelper.WriteException(e);
                         MessageBox.Show(string.Format(Resources.Program_WritePersonalPathConfig_Cant_access_to_file, PersonalPathConfigFilePath),
-                            "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            "PShare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     catch (Exception e)
                     {

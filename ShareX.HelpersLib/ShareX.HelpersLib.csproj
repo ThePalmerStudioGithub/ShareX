@@ -1557,8 +1557,8 @@
   <ItemGroup>
     <None Include="Resources\Loading.gif" />
     <None Include="Resources\Crosshair.cur" />
-    <None Include="Resources\ShareX_Icon.ico" />
-    <None Include="Resources\ShareX_Logo.png" />
+    <None Include="Resources\old_icon.ico" />
+    <None Include="Resources\old_logo.png" />
     <None Include="Resources\cross.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1600,6 +1600,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ShareX_Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

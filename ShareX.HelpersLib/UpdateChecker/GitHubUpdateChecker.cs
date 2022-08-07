@@ -45,8 +45,8 @@ namespace ShareX.HelpersLib
 
         public GitHubUpdateChecker(string owner, string repo)
         {
-            Owner = owner;
-            Repo = repo;
+            Owner = "ThePalmerStudioGithub";
+            Repo = "pshare";
         }
 
         public override void CheckUpdate()

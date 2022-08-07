@@ -75,6 +75,8 @@ namespace ShareX
             this.cbSendToMenu = new System.Windows.Forms.CheckBox();
             this.cbShellContextMenu = new System.Windows.Forms.CheckBox();
             this.tpPaths = new System.Windows.Forms.TabPage();
+            this.txtSaveImageSubFolderPatternWindow = new System.Windows.Forms.TextBox();
+            this.lblSaveImageSubFolderPatternWindow = new System.Windows.Forms.Label();
             this.btnPersonalFolderPathApply = new System.Windows.Forms.Button();
             this.btnOpenScreenshotsFolder = new System.Windows.Forms.Button();
             this.lblPreviewPersonalFolderPath = new System.Windows.Forms.Label();
@@ -179,8 +181,6 @@ namespace ShareX
             this.tpAdvanced = new System.Windows.Forms.TabPage();
             this.pgSettings = new System.Windows.Forms.PropertyGrid();
             this.tttvMain = new ShareX.HelpersLib.TabToTreeView();
-            this.lblSaveImageSubFolderPatternWindow = new System.Windows.Forms.Label();
-            this.txtSaveImageSubFolderPatternWindow = new System.Windows.Forms.TextBox();
             this.tcSettings.SuspendLayout();
             this.tpGeneral.SuspendLayout();
             this.tpTheme.SuspendLayout();
@@ -344,6 +344,7 @@ namespace ShareX
             this.btnLanguages.Menu = this.cmsLanguages;
             this.btnLanguages.Name = "btnLanguages";
             this.btnLanguages.UseVisualStyleBackColor = true;
+            this.btnLanguages.Click += new System.EventHandler(this.btnLanguages_Click);
             // 
             // cmsLanguages
             // 
@@ -576,6 +577,17 @@ namespace ShareX
             this.tpPaths.Controls.Add(this.txtSaveImageSubFolderPattern);
             resources.ApplyResources(this.tpPaths, "tpPaths");
             this.tpPaths.Name = "tpPaths";
+            // 
+            // txtSaveImageSubFolderPatternWindow
+            // 
+            resources.ApplyResources(this.txtSaveImageSubFolderPatternWindow, "txtSaveImageSubFolderPatternWindow");
+            this.txtSaveImageSubFolderPatternWindow.Name = "txtSaveImageSubFolderPatternWindow";
+            this.txtSaveImageSubFolderPatternWindow.TextChanged += new System.EventHandler(this.txtSaveImageSubFolderPatternWindow_TextChanged);
+            // 
+            // lblSaveImageSubFolderPatternWindow
+            // 
+            resources.ApplyResources(this.lblSaveImageSubFolderPatternWindow, "lblSaveImageSubFolderPatternWindow");
+            this.lblSaveImageSubFolderPatternWindow.Name = "lblSaveImageSubFolderPatternWindow";
             // 
             // btnPersonalFolderPathApply
             // 
@@ -1402,17 +1414,7 @@ namespace ShareX
             this.tttvMain.TreeViewFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tttvMain.TreeViewSize = 175;
             this.tttvMain.TabChanged += new ShareX.HelpersLib.TabToTreeView.TabChangedEventHandler(this.tttvMain_TabChanged);
-            // 
-            // lblSaveImageSubFolderPatternWindow
-            // 
-            resources.ApplyResources(this.lblSaveImageSubFolderPatternWindow, "lblSaveImageSubFolderPatternWindow");
-            this.lblSaveImageSubFolderPatternWindow.Name = "lblSaveImageSubFolderPatternWindow";
-            // 
-            // txtSaveImageSubFolderPatternWindow
-            // 
-            resources.ApplyResources(this.txtSaveImageSubFolderPatternWindow, "txtSaveImageSubFolderPatternWindow");
-            this.txtSaveImageSubFolderPatternWindow.Name = "txtSaveImageSubFolderPatternWindow";
-            this.txtSaveImageSubFolderPatternWindow.TextChanged += new System.EventHandler(this.txtSaveImageSubFolderPatternWindow_TextChanged);
+            this.tttvMain.Load += new System.EventHandler(this.tttvMain_Load);
             // 
             // ApplicationSettingsForm
             // 
@@ -1423,6 +1425,7 @@ namespace ShareX
             this.Controls.Add(this.tttvMain);
             this.Name = "ApplicationSettingsForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Load += new System.EventHandler(this.ApplicationSettingsForm_Load);
             this.Shown += new System.EventHandler(this.SettingsForm_Shown);
             this.Resize += new System.EventHandler(this.SettingsForm_Resize);
             this.tcSettings.ResumeLayout(false);

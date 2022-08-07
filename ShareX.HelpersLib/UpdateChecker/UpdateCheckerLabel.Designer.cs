@@ -71,6 +71,7 @@
             this.Controls.Add(this.lblCheckingUpdates);
             this.Controls.Add(this.pbLoading);
             this.Name = "UpdateCheckerLabel";
+            this.Load += new System.EventHandler(this.UpdateCheckerLabel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

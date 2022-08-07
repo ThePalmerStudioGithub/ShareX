@@ -177,6 +177,9 @@
   <data name="rtbDebug.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="rtbDebug.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
   <data name="rtbDebug.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 8</value>
   </data>
@@ -185,6 +188,9 @@
   </data>
   <data name="rtbDebug.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="rtbDebug.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="rtbDebug.WordWrap" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -261,24 +267,6 @@
   <data name="flpRunningFrom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
-  <data name="lblRunningFrom.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblRunningFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblRunningFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblRunningFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
-  </data>
-  <data name="lblRunningFrom.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblRunningFrom.Text" xml:space="preserve">
-    <value>Startup path:</value>
-  </data>
   <data name="&gt;&gt;lblRunningFrom.Name" xml:space="preserve">
     <value>lblRunningFrom</value>
   </data>
@@ -315,6 +303,36 @@
   <data name="&gt;&gt;flpRunningFrom.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblRunningFrom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRunningFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblRunningFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblRunningFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="lblRunningFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblRunningFrom.Text" xml:space="preserve">
+    <value>Startup path:</value>
+  </data>
+  <data name="&gt;&gt;lblRunningFrom.Name" xml:space="preserve">
+    <value>lblRunningFrom</value>
+  </data>
+  <data name="&gt;&gt;lblRunningFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRunningFrom.Parent" xml:space="preserve">
+    <value>flpRunningFrom</value>
+  </data>
+  <data name="&gt;&gt;lblRunningFrom.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnUploadLog.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -346,7 +364,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>760, 541</value>
@@ -358,7 +376,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ShareX - Debug log</value>
+    <value>PShare - Debug log</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DebugForm</value>

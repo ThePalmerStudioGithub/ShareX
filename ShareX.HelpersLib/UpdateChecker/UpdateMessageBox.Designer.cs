@@ -40,6 +40,7 @@
             // 
             resources.ApplyResources(this.lblText, "lblText");
             this.lblText.Name = "lblText";
+            this.lblText.Click += new System.EventHandler(this.lblText_Click);
             // 
             // btnNo
             // 

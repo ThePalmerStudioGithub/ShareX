@@ -39,7 +39,7 @@ namespace ShareX
         public AboutForm()
         {
             InitializeComponent();
-            lblProductName.Text = Program.Title;
+          
             pbLogo.Image = ShareXResources.Logo;
             ShareXResources.ApplyTheme(this);
 
@@ -52,20 +52,12 @@ namespace ShareX
             lblBuild.Text = "Microsoft Store build";
             lblBuild.Visible = true;
 #else
-            if (!SystemOptions.DisableUpdateCheck)
-            {
-                uclUpdate.UpdateLoadingImage();
-                checkUpdate = true;
-            }
-            else
-            {
-                uclUpdate.Visible = false;
-            }
+           
+         
 #endif
 
             rtbInfo.AppendLine(Resources.AboutForm_AboutForm_Links, FontStyle.Bold, 13);
             rtbInfo.AppendLine($@"{Resources.AboutForm_AboutForm_Website}: {Links.Website}
-{Resources.AboutForm_AboutForm_Project_page}: {Links.GitHub}
 {Resources.AboutForm_AboutForm_Changelog}: {Links.Changelog}
 {Resources.AboutForm_AboutForm_Privacy_policy}: {Links.PrivacyPolicy}
 ", FontStyle.Regular);
@@ -73,6 +65,7 @@ namespace ShareX
             rtbInfo.AppendLine(Resources.AboutForm_AboutForm_Team, FontStyle.Bold, 13);
             rtbInfo.AppendLine($@"Jaex: {Links.Jaex}
 McoreD: {Links.McoreD}
+Blaine Palmer: {"https://thepalmerstudio.net"}
 ", FontStyle.Regular);
 
             rtbInfo.AppendLine(Resources.AboutForm_AboutForm_Translators, FontStyle.Bold, 13);
@@ -114,26 +107,23 @@ Inno Setup Dependency Installer: https://github.com/DomGries/InnoDependencyInsta
 Blob Emoji: http://blobs.gg
 ", FontStyle.Regular);
 
-            rtbInfo.AppendText("Copyright (c) 2007-2022 ShareX Team", FontStyle.Bold, 13);
+            rtbInfo.AppendText("Thank you for using PShare!", FontStyle.Bold, 13);
 
-            easterEgg = new EasterEggAboutAnimation(cLogo, this);
+          
         }
 
         private async void AboutForm_Shown(object sender, EventArgs e)
         {
+            productname.Text = "PShare " + Application.ProductVersion + " Reverse";
             this.ForceActivate();
 
-            if (checkUpdate)
-            {
-                UpdateChecker updateChecker = Program.UpdateManager.CreateUpdateChecker();
-                await uclUpdate.CheckUpdate(updateChecker);
-            }
+           
+         
         }
 
         private void pbLogo_MouseDown(object sender, MouseEventArgs e)
         {
-            easterEgg.Start();
-            pbLogo.Visible = false;
+            MessageBox.Show("Hehe", "Message");
         }
 
         private void rtb_LinkClicked(object sender, LinkClickedEventArgs e)
@@ -154,6 +144,29 @@ Blob Emoji: http://blobs.gg
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+            if (Environment.Is64BitOperatingSystem == true) {
+                lblarchitecture.Text = "Architecture: 64 Bit " + ", Windows Version: " + Environment.OSVersion.Version + ", Platform: " + Environment.OSVersion.Platform;
+                    }
+        }
+
+        private void rtbInfo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://getsharex.com");
+        }
+
+        private void checkforupdates_Click(object sender, EventArgs e)
+        {
+            DownloaderForm downloader = new DownloaderForm("https://eskom.blainewpalmer.com/download/pshare/latestversion.exe", "latestversion.exe");
+            downloader.ShowDialog();
         }
     }
 }

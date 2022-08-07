@@ -103,7 +103,7 @@ namespace ShareX.HelpersLib
                         llblUpdateAvailable.Visible = true;
                         break;
                     case UpdateStatus.UpToDate:
-                        lblStatus.Text = string.Format(Resources.UpdateCheckerLabel_UpdateControls_ShareX_is_up_to_date, Application.ProductName);
+                        lblStatus.Text = string.Format(Resources.UpdateCheckerLabel_UpdateControls_ShareX_is_up_to_date, "PShare");
                         lblStatus.Visible = true;
                         break;
                 }
@@ -113,6 +113,11 @@ namespace ShareX.HelpersLib
         private void llblUpdateAvailable_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UpdateMessageBox.Start(updateChecker);
+        }
+
+        private void UpdateCheckerLabel_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

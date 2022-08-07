@@ -27,8 +27,8 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("ShareX Team")]
-[assembly: AssemblyProduct("ShareX")]
+[assembly: AssemblyProduct("PShare")]
 [assembly: AssemblyCopyright("Copyright (c) 2007-2022 ShareX Team")]
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("14.1.1")]
-[assembly: AssemblyFileVersion("14.1.1")]
+[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyFileVersion("1.0.0.2")]

@@ -137,5 +137,10 @@ namespace ShareX.HelpersLib
             DialogResult = DialogResult.No;
             Close();
         }
+
+        private void lblText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

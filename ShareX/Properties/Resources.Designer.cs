@@ -295,7 +295,7 @@ namespace ShareX.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Team.
+        ///   Looks up a localized string similar to Developers.
         /// </summary>
         public static string AboutForm_AboutForm_Team {
             get {
@@ -607,7 +607,7 @@ namespace ShareX.Properties {
         /// <summary>
         ///   Looks up a localized string similar to ShareX needs to be restarted for the language changes to apply.
         ///
-        ///Would you like to restart ShareX?.
+        ///Would you like to restart PShare?.
         /// </summary>
         public static string ApplicationSettingsForm_cbLanguage_SelectedIndexChanged_Language_Restart {
             get {

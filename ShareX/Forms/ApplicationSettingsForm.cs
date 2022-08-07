@@ -1121,5 +1121,20 @@ namespace ShareX
         }
 
         #endregion Proxy
+
+        private void ApplicationSettingsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLanguages_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tttvMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
